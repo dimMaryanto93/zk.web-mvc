@@ -12,9 +12,13 @@
                 <listheader label="Dibuat oleh"/>
                 <listheader label="Harga/Unit"/>
             </listhead>
-            <listitem>
-
-            </listitem>
+            <template name="model">
+                <listitem>
+                    <listcell label="${each.model}"/>
+                    <listcell label="${each.make}"/>
+                    <listcell label="${each.price}"/>
+                </listitem>
+            </template>
         </listbox>
         <hbox style="margin-top:20px">
             <vbox>

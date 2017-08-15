@@ -21,11 +21,14 @@ public class CarDao {
         StringBuilder sb = new StringBuilder("select * from m_cars");
 
         boolean punyaParamenter = keyword != null && !keyword.isEmpty();
-        if (punyaParamenter) sb.append(" where nama = ?");
+        if (punyaParamenter) sb.append(" where lower(model) like ?");
 
         Connection connection = dataSource.getConnection();
         PreparedStatement ps = connection.prepareStatement(sb.toString());
-        if (punyaParamenter) ps.setString(1, keyword);
+        if (punyaParamenter) ps.setString(1,
+                new StringBuilder("%")
+                        .append(keyword.toLowerCase())
+                        .append("%").toString());
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             Car aCar = new Car(
