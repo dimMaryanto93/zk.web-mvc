@@ -1,8 +1,17 @@
 # ZK Framework with MVC pattern
 
-MVC is ...
+Di project ini kita akan membuat sebuah web aplikasi dengan framework ZK 
+menggunakan pendekatan MVC (Model View Controller) dengan contoh kasus 
+menampilkan data ke tableview dan pencariannya. kurang lebih seperti gambar berikut:
 
-membuat project dengan maven archetype zk-archetype-webapp
+![Contoh interface](images/details.png)
+
+Pada dasarnya, tampilan tersebut terbagi menjadi 3 area yaitu 
+- pencarian, 
+- daftar semua mobil dan 
+- detail mengenai mobil-mobil yang di seleksi di table.
+
+### Membuat project dengan maven archetype zk-archetype-webapp
 
 ```bash
 mvn archetype:generate -Dpackage=belajar.zk -DgroupId=com.dimas.maryanto.zk -DartifactId=zk.web-mvc -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=org.zkoss -DarchetypeArtifactId=zk-archetype-webapp
