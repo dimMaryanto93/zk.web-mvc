@@ -1,11 +1,12 @@
 <zk>
-    <window title="Daftar Harga Mobil" width="600px" border="normal">
+    <window title="Daftar Harga Mobil" width="600px" border="normal"
+            apply="belajar.zk.CarController">
         <hbox>
             Keyword:
             <textbox id="keywordBox" placeholder="Cari mobil apa?"/>
             <button id="searchButton" label="Search"/>
         </hbox>
-        <listbox emptyMessage="Mobil tidak ditemukan!">
+        <listbox emptyMessage="Mobil tidak ditemukan!" id="carListBox">
             <listhead>
                 <listheader label="Model"/>
                 <listheader label="Dibuat oleh"/>
