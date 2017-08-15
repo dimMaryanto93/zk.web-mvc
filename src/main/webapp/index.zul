@@ -1,10 +1,27 @@
 <zk>
-    <window apply="org.zkoss.bind.BindComposer"
-            viewModel="@id('vm')@init('belajar.zk.MyViewModel')"
-            validationMessages="@id('vmsgs')">
-        <hlayout>count:
-            <label value="@load(vm.count)"/>
-        </hlayout>
-        <button label="add" onClick="@command('cmd')"/>
+    <window title="Daftar Harga Mobil" width="600px" border="normal">
+        <hbox>
+            Keyword:
+            <textbox id="keywordBox" placeholder="Cari mobil apa?"/>
+            <button id="searchButton" label="Search"/>
+        </hbox>
+        <listbox emptyMessage="Mobil tidak ditemukan!">
+            <listhead>
+                <listheader label="Model"/>
+                <listheader label="Dibuat oleh"/>
+                <listheader label="Harga/Unit"/>
+            </listhead>
+            <listitem>
+
+            </listitem>
+        </listbox>
+        <hbox style="margin-top:20px">
+            <vbox>
+                <label id="modelLabel"/>
+                <label id="makeLabel"/>
+                <label id="priceLabel"/>
+                <label id="descriptionLabel"/>
+            </vbox>
+        </hbox>
     </window>
 </zk>

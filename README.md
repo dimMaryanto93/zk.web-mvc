@@ -26,3 +26,25 @@ Tambahkan dependency `org.projectlombok` untuk memudahkan dalam membuat POJO (Pl
     <version>1.16.18</version>
 </dependency>
 ```
+
+## Membuat User Interface (View)
+
+ZK framework mendefinisikan GUI dengan ZUML (ZK User Interface Markup Language) 
+yang basicly menggunakan bahasa XML meskipun bisa juga menggunakan 
+template engine lain seperti `JSP`, `Velocity` dll. 
+tapi di project ini kita akan menggunakan default ZK yaitu `.zul`
+
+Berikut adalah contoh tag `.zul` untuk mendesign user interface di ZK Framework dengan ZUML.
+
+```xml
+<zk>
+    <window title="Daftar Harga Mobil" width="600px" border="normal">
+        <!-- sisipkan child tags here-->
+    </window>
+</zk>
+```
+
+**Note** yang perlu diperhatikan!!
+
+Semua components dalam ZK Components contohnya seperti `textbox`, `checkbox`, `datebox` dan lain-lain 
+harus berada dalam tags `<window>...</window>`
